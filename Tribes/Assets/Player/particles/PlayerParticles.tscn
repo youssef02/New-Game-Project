@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="Gradient" id=9]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.965409, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flatness = 0.33
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.47
+linear_accel = 4.0
+scale_curve = SubResource( 2 )
+color_ramp = SubResource( 10 )
+
+[sub_resource type="NoiseTexture" id=4]
+
+[sub_resource type="OpenSimplexNoise" id=5]
+period = 79.8
+
+[sub_resource type="NoiseTexture" id=6]
+seamless = true
+as_normalmap = true
+noise = SubResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=7]
+roughness_texture = SubResource( 4 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = -4.94
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.17
+subsurf_scatter_texture = SubResource( 6 )
+
+[sub_resource type="SphereMesh" id=8]
+material = SubResource( 7 )
+
+[node name="Particles" type="Particles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.68529, 0 )
+visibility_aabb = AABB( -4, -2.1035, -7.73063, 8, 4.20698, 15.4613 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 8 )

@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Cube0011.tscn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+signal jumppad(val)
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	print(\"collision disabled \"+str($CollisionShape.disabled))
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+func _on_Jumppad_body_entered(body):
+	print(\"hello world\") 
+	queue_free()
+	
+	if body.name == \"Player\":
+		
+		emit_signal(\"jumppad\",true)
+	pass # Replace with function body.
+"
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1 )
+
+[node name="Jumppad" type="Area"]
+collision_layer = 4
+collision_mask = 2
+script = SubResource( 1 )
+
+[node name="Cube001" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, 0, 0.202181, 0 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Jumppad_body_entered"]
