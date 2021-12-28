@@ -37,7 +37,6 @@ gdscript/warnings/unsafe_call_argument=true
 
 [display]
 
-window/size/resizable=false
 window/size/fullscreen=true
 window/dpi/allow_hidpi=true
 window/stretch/mode="viewport"

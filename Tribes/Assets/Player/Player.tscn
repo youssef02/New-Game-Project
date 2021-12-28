@@ -45,6 +45,7 @@ func _ready():
 	$MeshInstance/Particles.emitting = false
 	$MeshInstance/Particles.restart()
 	
+	
 	timer = Timer.new()
 	
 	timer.connect(\"timeout\",self,\"timeoutparticle\")
@@ -67,9 +68,14 @@ func timeoutparticle():
 func timeoutwalljump():
 	pass
 
+var shake_amount = 0.02
 func _process(delta):
+	$Spatial/Camera.set_h_offset(rand_range(-1.0, 1.0) * shake_amount)
+	$Spatial/Camera.set_v_offset(rand_range(-1.0, 1.0) * shake_amount)
+	
 	pass
 	
+
 func _physics_process(delta):
 	
 	#player movement XY
@@ -93,35 +99,19 @@ func _physics_process(delta):
 			dir.z += 1
 			
 		#Jump
-		if is_on_wall():
-			if (velocity.x + velocity.z)/2 > 0.5:
-				velocity.y = 0
+		
+		var jump = Input.is_action_just_pressed(\"move_jump\")
+		if jump and( is_on_floor() or is_on_wall()) :
 			
-		if Input.is_action_just_pressed(\"move_jump\") and (is_on_floor() or is_on_wall() or double_jump):
-#			if not (is_on_floor() or is_on_wall()):
-#				if double_jump == true:
-#					double_jump = false
-#					$MeshInstance/Particles.set_emitting(true)
-#					timer.set_wait_time(0.2)
-#					timer.start()
-#				velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
-#
 			if is_on_floor():
-				double_jump = true
-				if (super_jump):
-					velocity += jump_vector * Jump_speed * 2 - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
-					$MeshInstance/Particles.set_emitting(true)
-					timer.set_wait_time(0.4)
-					timer.start()
-					
-				else:
-					velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
+				velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
 			elif is_on_wall():
-				var normal = get_slide_collision(0).normal
-				double_jump = true
-				velocity += normal * Jump_speed
+				var collision = get_slide_collision(0).normal
+				velocity += collision * Jump_speed
 				velocity += Vector3.UP * Jump_speed
-	
+		elif double_jump and jump:
+			double_jump = false
+			velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
 		#Sprint toggle
 		if can_sprint and Input.is_action_pressed(\"move_sprint\") and is_on_floor():
 			move_sprint = true
@@ -134,19 +124,21 @@ func _physics_process(delta):
 			move_sprint = false
 	
 	#Smooth movement
-	dir = $Spatial.transform.basis.xform(dir.normalized()) * (move_speed_sprint if move_sprint else move_speed)
+	dir = transform.basis.xform(dir.normalized()) * (move_speed_sprint if move_sprint else move_speed)
 	
 	if is_on_floor() or dir != Vector3(0, 0, 0):
 		var acceleration = move_acceleration if dir.dot(velocity) else move_deacceleration
 		var vp = gravaty_vector.normalized() * velocity.dot(gravaty_vector)
-		vp.y = 0.00
 		velocity = (velocity - vp).linear_interpolate(dir, acceleration * delta) + vp
 	
 	#Gravaty
 	if !is_on_floor():
 		velocity += gravaty_vector * gravaty * delta
-	else:
+		
+	#double jump
+	if is_on_floor() or is_on_wall():
 		double_jump = true
+	
 	
 	#Player move
 	
@@ -227,7 +219,7 @@ shape = SubResource( 4 )
 
 [node name="Camera" type="ClippedCamera" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, 0.980965, 0.194183, 0, -0.194183, 0.980965, 0, 2.73682, 7.45405 )
-far = 575.2
+far = 8192.0
 
 [node name="Label" type="Label" parent="Spatial/Camera"]
 margin_right = 70.0
