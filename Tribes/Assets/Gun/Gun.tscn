@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Spatial
+
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+var stat = 0
+#0 hiden
+#1 shown
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.is_action_pressed(\"right_click\") and stat == 0:
+		$AnimationPlayer.play(\"onfocusgun\")
+		stat = 1
+	elif  not Input.is_action_pressed(\"right_click\") and stat == 1 :
+		$AnimationPlayer.play_backwards(\"onfocusgun\")
+		stat = 0
+		
+	pass
+"
+
+[sub_resource type="SpatialMaterial" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MeshInstance:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MeshInstance:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "onfocusgun"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 1.2, 0.8, 0 ), Vector3( 1.2, 0.8, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MeshInstance:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.2, 0.2, 0.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MeshInstance:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.380093, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 45, 0, 0 ), Vector3( -45, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Gun" type="Spatial"]
+script = SubResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/onfocusgun = SubResource( 5 )

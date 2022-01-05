@@ -1,9 +1,10 @@
 [gd_resource type="Environment" format=2]
 
 [resource]
-background_mode = 1
 background_sky_orientation = Basis( 3.254, 0, 0, 0, 1, 0, 0, 0, 1 )
-background_color = Color( 1, 1, 1, 1 )
-background_energy = 0.0
+background_color = Color( 0.588235, 0.0784314, 0.807843, 1 )
 ambient_light_color = Color( 1, 1, 1, 1 )
+tonemap_mode = 1
+glow_enabled = true
+glow_blend_mode = 0
 adjustment_enabled = true

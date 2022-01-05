@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Assets/Blocks/jumppads.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Blocks/Jumppads root.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Blocks/Floor root.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Blocks/walls root.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/TEleporter/Teleporter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Text 3D/Finishline.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Text 3D/jump text 02 level .tscn" type="PackedScene" id=7]
 
@@ -20,6 +21,7 @@ script/source = "extends Spatial
 func _ready():	
 	$Player/MeshInstance/Particles.emitting = true
 	$Player/MeshInstance/Particles.emitting = false
+	
 	pass # Replace with function body.
 
 
@@ -37,9 +39,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.046093, 0 )
 script = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 8, 9 )
-
-[node name="jumppads" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 240.996, 26.6753, -371.642 )
 
 [node name="Floor root" parent="." instance=ExtResource( 2 )]
 
@@ -50,3 +50,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -202, 50, 21 )
 
 [node name="jump text 02 level " parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 9, 7, -7 )
+
+[node name="Jumppads root" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.211, 0.0404444, -19.9952 )
+
+[node name="Teleporter" parent="Jumppads root" instance=ExtResource( 5 )]
+transform = Transform( 0.38959, 0, 0.920988, 0, 1, 0, -0.920988, 0, 0.38959, 335.217, 26.2073, 275.232 )

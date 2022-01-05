@@ -1,0 +1,110 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0.537255, 0.815686, 1 )
+emission_enabled = true
+emission = Color( 0.529412, 0.909804, 1, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0.00257732, 0.542169 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0872144 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 5
+emission_ring_radius = 4.0
+emission_ring_inner_radius = 6.0
+emission_ring_height = 1.0
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+radial_accel = -100.0
+scale_random = 1.0
+scale_curve = SubResource( 3 )
+hue_variation = 0.71
+hue_variation_random = 0.59
+
+[sub_resource type="SphereMesh" id=5]
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Particles
+
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+
+
+func _on_Area_body_entered(body: Node) -> void:
+	print(body.name)
+	if body.name == \"Player\":
+		print(\"Go to next level\")
+	pass # Replace with function body.
+"
+
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="CubeMesh" id=8]
+
+[sub_resource type="SpatialMaterial" id=9]
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="SpatialMaterial" id=10]
+metallic = 1.0
+metallic_specular = 0.29
+roughness = 0.19
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+
+[node name="Teleporter" type="Particles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0287366, 0 )
+material_override = SubResource( 1 )
+amount = 10
+local_coords = false
+draw_order = 1
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 5 )
+script = SubResource( 6 )
+
+[node name="Second" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0287366, 0 )
+material_override = SubResource( 1 )
+amount = 21
+local_coords = false
+draw_order = 1
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1.08769, 0, 0, 0, 4.61459, 0, 0, 0, 2.77251, 5.94806, 0, 0 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 9 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1.08769, 0, 0, 0, 4.61459, 0, 0, 0, 2.77251, -5.6453, -0.403663, 0.0128193 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 10 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

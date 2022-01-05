@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Player/particles/PlayerParticles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Particles/BaseEXplosion.tscn" type="PackedScene" id=2]
 
 [sub_resource type="GDScript" id=1]
 script/source = "#Johann Massyn, 23/06/2019
@@ -38,19 +39,26 @@ export (Vector3) var jump_vector = Vector3(0, 1, 0) #Jump normal direction vecto
 export (Vector3) var velocity = Vector3(0, 0, 0) #Initial velocity
 export (bool) var double_jump = true #enable double jump
 export (bool) var super_jump = false #enable super jump
+var a = preload(\"res://Assets/Gun/Gun.tscn\").instance()
 
+
+var emit = false
 var timer = null
+var cmr_ns = Vector3(0,2.737,7.454)
+var cmr_fs = Vector3(0,3.01,4.423)
+
+onready var camera = get_node(\"Spatial/Camera\")
 
 func _ready():
 	$MeshInstance/Particles.emitting = false
 	$MeshInstance/Particles.restart()
-	
+	add_child(a)
 	
 	timer = Timer.new()
 	
 	timer.connect(\"timeout\",self,\"timeoutparticle\")
 	add_child(timer)
-	print(\"conected timer\")
+	
 	timer.one_shot = false
 	
 	if mouse_captured:
@@ -59,7 +67,7 @@ func _ready():
 	pass
 	
 func timeoutparticle():
-	print(\"timeout\")
+	emit= false
 	$MeshInstance/Particles.set_emitting(false)
 	timer.stop()
 	
@@ -69,10 +77,24 @@ func timeoutwalljump():
 	pass
 
 var shake_amount = 0.02
+var speedofvelocity = 0
+
+
 func _process(delta):
-	$Spatial/Camera.set_h_offset(rand_range(-1.0, 1.0) * shake_amount)
-	$Spatial/Camera.set_v_offset(rand_range(-1.0, 1.0) * shake_amount)
+	#$Spatial/Camera.set_h_offset(rand_range(-1.0, 1.0) * shake_amount)
+	#$Spatial/Camera.set_v_offset(rand_range(-1.0, 1.0) * shake_amount)
+	speedofvelocity = sqrt(pow(velocity.x,2)+ pow(velocity.y,2) + pow(velocity.z,2))
+	var glow = 0.03927*speedofvelocity - 0.43256+1
+	$MeshInstance.get_mesh().surface_get_material(0).set_emission_energy(glow) 
+	#print(glow)
 	
+	if Input.is_action_pressed(\"right_click\"):
+		if not camera.translation == cmr_fs:
+			camera.translation = lerp(camera.translation,cmr_fs,0.2)
+	else:
+		if not camera.translation == cmr_ns:
+			camera.translation = lerp(camera.translation,cmr_ns,0.2)
+		
 	pass
 	
 
@@ -104,12 +126,18 @@ func _physics_process(delta):
 		if jump and( is_on_floor() or is_on_wall()) :
 			
 			if is_on_floor():
-				velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
+				if super_jump:
+					Jump_speed = 24
+					velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
+				else:
+					Jump_speed = 12
+					velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
 			elif is_on_wall():
 				var collision = get_slide_collision(0).normal
 				velocity += collision * Jump_speed
 				velocity += Vector3.UP * Jump_speed
 		elif double_jump and jump:
+			Jump_speed = 12
 			double_jump = false
 			velocity += jump_vector * Jump_speed - (jump_vector * -1).normalized() * velocity.dot(jump_vector * -1)
 		#Sprint toggle
@@ -118,6 +146,7 @@ func _physics_process(delta):
 			$MeshInstance/Particles.set_emitting(true)
 			timer.set_wait_time(0.4)
 			timer.start()
+			emit = true
 			
 			
 		if can_sprint and not Input.is_action_pressed(\"move_sprint\") and is_on_floor():
@@ -127,6 +156,7 @@ func _physics_process(delta):
 	dir = transform.basis.xform(dir.normalized()) * (move_speed_sprint if move_sprint else move_speed)
 	
 	if is_on_floor() or dir != Vector3(0, 0, 0):
+		
 		var acceleration = move_acceleration if dir.dot(velocity) else move_deacceleration
 		var vp = gravaty_vector.normalized() * velocity.dot(gravaty_vector)
 		velocity = (velocity - vp).linear_interpolate(dir, acceleration * delta) + vp
@@ -146,7 +176,8 @@ func _physics_process(delta):
 	
 	#label text
 	if OS.is_debug_build():
-		$Spatial/Camera/Label.set_text(\"Fps: \"+str(Engine.get_frames_per_second())+\"\\nVelocity : \"+str(velocity.abs())+\"\\nJump : \"+str(double_jump))
+		
+		$Spatial/Camera/Label.set_text(\"Fps: \"+str(Engine.get_frames_per_second())+\"\\nVelocity : \"+str(velocity.abs())+\"\\n velocity speed : \"+str(speedofvelocity))
 	pass
 
 
@@ -155,28 +186,25 @@ func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotation_degrees.y += -event.relative.x * mouse_sensitivity_x
 		$Spatial.rotation_degrees.x = clamp($Spatial.rotation_degrees.x + -event.relative.y * mouse_sensitivity_y, mouse_max_down, mouse_max_up)
+	
 	pass
 
 
-func _on_Cube001_super_jump(val):
+
+
+
+func _on_Area_body_entered(body: Node) -> void:
+	#print(body.is_in_group(\"jumppad\"))
+	if body.is_in_group(\"jumppad\"):
+		#print(\"body entered XD\")
+		super_jump = true
+		
+	pass # Replace with function body.
+
+
+func _on_Area_body_exited(body: Node) -> void:
 	
-	if val == true:
-		super_jump = true
-	else:
-		 super_jump = false
-	pass # Replace with function body.
-
-
-func _on_jumppad_jumppad(val):
-	if val == true:
-		super_jump = true
-	else:
-		super_jump=false
-	pass # Replace with function body.
-
-
-func _on_jumppad_area_entered(area):
-	print(\"hello\")
+	super_jump = false
 	pass # Replace with function body.
 "
 
@@ -188,6 +216,8 @@ params_specular_mode = 1
 params_line_width = 8.6
 params_point_size = 16.8
 albedo_color = Color( 0.00392157, 0.54902, 0.984314, 1 )
+metallic = 1.0
+roughness = 0.0
 emission_enabled = true
 emission = Color( 0.184314, 0.207843, 1, 1 )
 emission_energy = 0.0
@@ -199,8 +229,54 @@ subsurf_scatter_strength = 0.05
 [sub_resource type="CubeMesh" id=3]
 material = SubResource( 2 )
 
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.0352941, 0.729412, 1, 1 )
+metallic = 0.75
+roughness = 0.21
+emission_enabled = true
+emission = Color( 0.176471, 0.956863, 1, 1 )
+emission_energy = 0.0
+emission_operator = 0
+emission_on_uv2 = false
+
 [sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1 )
+
+[sub_resource type="SphereShape" id=5]
+radius = 2.0
+
+[sub_resource type="GDScript" id=7]
+script/source = "extends Spatial
+
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+
+func _process(delta: float) -> void:
+	var a = get_parent().speedofvelocity 
+	var b = get_parent().emit
+	
+	if b:
+		$BaseEXplosion.set_emitting(true)
+		
+	else:
+		$BaseEXplosion.set_emitting(false)
+	var scalx = (0.04167 * a +0.25)/2 - 0.9
+	scale = Vector3(scalx,scalx,scalx)
+	rotate_y(-a* 0.04)
+	pass
+"
 
 [node name="Player" type="KinematicBody"]
 collision_layer = 2147483650
@@ -208,7 +284,7 @@ script = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 3 )
-material/0 = null
+material/0 = SubResource( 6 )
 
 [node name="Particles" parent="MeshInstance" instance=ExtResource( 1 )]
 
@@ -218,7 +294,7 @@ shape = SubResource( 4 )
 [node name="Spatial" type="Spatial" parent="."]
 
 [node name="Camera" type="ClippedCamera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 0.980965, 0.194183, 0, -0.194183, 0.980965, 0, 2.73682, 7.45405 )
+transform = Transform( 1, 0, 0, 0, 0.980965, 0.194183, 0, -0.194183, 0.980965, 0, 3.00955, 4.423 )
 far = 8192.0
 
 [node name="Label" type="Label" parent="Spatial/Camera"]
@@ -229,3 +305,38 @@ text = "%Data%"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 5 )
+
+[node name="rotatingparticle" type="Spatial" parent="."]
+transform = Transform( -0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0, 0, 0 )
+script = SubResource( 7 )
+
+[node name="BaseEXplosion" parent="rotatingparticle" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 3.20649, 0.877909, 0 )
+amount = 69
+
+[node name="rotatingparticle2" type="Spatial" parent="."]
+transform = Transform( -0.25, 0, 0.433013, 0, 0.5, 0, -0.433013, 0, -0.25, 0, 0, 0 )
+script = SubResource( 7 )
+
+[node name="BaseEXplosion" parent="rotatingparticle2" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.206, 0.878, 0 )
+amount = 69
+
+[node name="rotatingparticle3" type="Spatial" parent="."]
+transform = Transform( -0.25, 0, -0.433013, 0, 0.5, 0, 0.433013, 0, -0.25, 0, 0, 0 )
+script = SubResource( 7 )
+
+[node name="BaseEXplosion" parent="rotatingparticle3" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.206, 0.878, 0 )
+amount = 69
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.56578, 0 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

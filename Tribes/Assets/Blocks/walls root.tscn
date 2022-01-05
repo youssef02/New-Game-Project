@@ -36,227 +36,86 @@ surfaces/1 = {
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.999992, -0.00401425, 0, 0.00401425, 0.999992, 0, 0, 0 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls2" type="Spatial" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 48.7851, 0, 11.3651 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls2" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls2" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls3" type="Spatial" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 38.4746, 3.12411, 27.5868 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls3" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls3" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls4" type="Spatial" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 52.1819, 8.18182, 39.0407 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls4" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls4" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls4" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls4" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls5" type="Spatial" parent="."]
 transform = Transform( -0.999957, 3.73421e-05, 0.00930232, 0, 0.999992, -0.00401425, -0.00930239, -0.00401408, -0.999949, 5.91496, 12.945, 55.7099 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls5" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls5" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls6" type="Spatial" parent="."]
 transform = Transform( -0.00930223, 0, -0.999957, 0, 1, 0, 0.999957, 0, -0.00930223, -42.7623, 12.945, 43.8915 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls6" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Walls6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls6" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Walls7" type="Spatial" parent="."]
 transform = Transform( -0.00930223, 0, -0.999957, 0, 1, 0, 0.999957, 0, -0.00930223, -32.3014, 16.0691, 27.7664 )
 
-[node name="Cube004" type="MeshInstance" parent="Walls7" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Walls7" instance=ExtResource( 3 )]
+transform = Transform( 2.49978, 0.0372089, -0.0232545, -0.0232556, -1.74846e-07, -2.49989, -0.0232545, 3.99983, 0.000216221, -5.06547, 1.10172, -4.66702 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+
+[node name="Cube006" parent="Walls7" instance=ExtResource( 3 )]
+transform = Transform( 0.000216219, -3.99983, 0.0232545, 2.49989, -1.74846e-07, -0.0232556, 0.0232546, 0.0372089, 2.49978, -21.2021, 9.21529, 5.55249 )
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+
+[node name="Cube004" parent="Walls7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 7.18865, 0, -8.815 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Walls7" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Walls7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Walls8" type="Spatial" parent="."]
-transform = Transform( -0.00930223, 0, -0.999957, 0, 1, 0, 0.999957, 0, -0.00930223, -45.9015, 21.1268, 16.1855 )
-
-[node name="Cube004" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.5, 0, 0, 0, 4, 1.86265e-09, 0, 0, 2.5, 6.47418, 0.849094, -9.15724 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube006" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.96743e-07, 0, 2.5, 0, 4, 0, -2.5, 0, -3.96743e-07, 18.2407, 29.3623, 180.689 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube007" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.96743e-07, 0, 2.5, 0, 4, 0, -2.5, 0, -3.96743e-07, 18.2407, 41.3623, 180.689 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube008" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -3.72529e-09, 0, 4, 0, 3.72529e-09, 0, 2.49999, 18.3337, 53.3623, 190.688 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube009" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.8743e-07, 0, 2.49999, 0, 4, 0, -2.49999, 0, -3.8743e-07, 18.1476, 29.3623, 170.689 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube010" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.91155e-07, 0, 2.49999, 0, 4, 0, -2.49999, 0, -3.91155e-07, -18.7577, 29.3623, 181.033 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube011" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.94881e-07, 0, 2.49999, 0, 4, 0, -2.49999, 0, -3.94881e-07, -18.7577, 41.3623, 181.033 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube012" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.30385e-08, 0, 4, 0, 1.30385e-08, 0, 2.49999, 8.33412, 53.3623, 190.781 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube014" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -7.45058e-09, 0, 4, 0, 7.45058e-09, 0, 2.49999, -1.66544, 53.3623, 190.874 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube015" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.49012e-08, 0, 4, 0, 1.49012e-08, 0, 2.49999, -11.665, 53.3623, 190.967 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube016" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -7.45058e-09, 0, 4, 0, 7.45058e-09, 0, 2.49999, 18.3337, 41.3623, 190.688 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube017" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.49012e-08, 0, 4, 0, 1.49012e-08, 0, 2.49999, 8.33412, 41.3623, 190.781 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube018" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -9.31323e-09, 0, 4, 0, 9.31323e-09, 0, 2.49999, -1.66544, 41.3623, 190.874 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube019" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.49012e-08, 0, 4, 0, 1.49012e-08, 0, 2.49999, -11.665, 41.3623, 190.967 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube020" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -9.31323e-09, 0, 4, 0, 9.31323e-09, 0, 2.49999, 18.3337, 29.3623, 190.688 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube021" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.49012e-08, 0, 4, 0, 1.49012e-08, 0, 2.49999, 8.33412, 29.3623, 190.781 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube022" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.11759e-08, 0, 4, 0, 1.11759e-08, 0, 2.49999, -1.66544, 29.3623, 190.874 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube023" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.49999, 0, -1.86265e-08, 0, 4, 0, 1.86265e-08, 0, 2.49999, -11.665, 29.3623, 190.967 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube013" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( -3.81842e-07, 0, 2.49999, 0, 4, 0, -2.49999, 0, -3.81842e-07, -18.8508, 29.3623, 171.033 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube005" type="MeshInstance" parent="Walls8" instance=ExtResource( 3 )]
-transform = Transform( 2.5, 0, 0, 0, 4, 6.51926e-09, 0, 0, 2.5, -2.81647, 0, -8.81501 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null

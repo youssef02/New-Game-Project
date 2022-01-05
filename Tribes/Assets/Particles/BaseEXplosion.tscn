@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 1, 0.929412, 1 )
+metallic = 0.68
+roughness = 0.0
+emission_enabled = true
+emission = Color( 0.133333, 0.941176, 0.992157, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.664948, 0.609629 ), 0.123081, 0.123081, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 1, 1, 1 )
+spread = 180.0
+gravity = Vector3( 1, 0, 0 )
+initial_velocity = 45.0
+initial_velocity_random = 1.0
+scale = 0.25
+scale_random = 0.12
+scale_curve = SubResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=4]
+metallic = 0.77
+
+[sub_resource type="SphereMesh" id=5]
+material = SubResource( 4 )
+
+[node name="BaseEXplosion" type="Particles"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+material_override = SubResource( 6 )
+amount = 50
+lifetime = 0.5
+explosiveness = 0.27
+randomness = 1.0
+local_coords = false
+draw_order = 1
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )

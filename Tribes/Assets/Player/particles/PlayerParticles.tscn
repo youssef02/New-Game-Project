@@ -52,8 +52,8 @@ subsurf_scatter_texture = SubResource( 6 )
 material = SubResource( 7 )
 
 [node name="Particles" type="Particles"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.68529, 0 )
-visibility_aabb = AABB( -4, -2.1035, -7.73063, 8, 4.20698, 15.4613 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.05494, 0 )
+visibility_aabb = AABB( -2.16278, -2.1035, -1.16363, 4.32556, 4.20698, 2.32731 )
 local_coords = false
 draw_order = 1
 process_material = SubResource( 3 )

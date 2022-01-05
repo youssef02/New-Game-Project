@@ -64,544 +64,409 @@ surfaces/1 = {
 [node name="Floors8" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, -25.281, 12.945, 55.4197 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube010" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
-transform = Transform( 2.5, 0, -1.49012e-08, 0, 0.625, 0, 1.49012e-08, 0, 2.5, 203.894, 35, 38.9796 )
-mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
-
-[node name="Cube003" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
-transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
+[node name="Cube006" parent="Floors8" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.3658, -7.62939e-06, 10.0336 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors8" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors8" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors9" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, -35.2583, 12.945, 55.3269 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors9" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors9" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors10" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, -24.765, 22.3514, -0.0463028 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors10" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors10" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
+
+[node name="Floors13" type="Spatial" parent="."]
+transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, 16.1732, 18.2603, -19.5437 )
+
+[node name="Cube002" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="Cube003" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
+mesh = SubResource( 1 )
+
+[node name="Cube004" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="Cube005" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
+mesh = SubResource( 1 )
+
+[node name="Cube006" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
+mesh = SubResource( 1 )
+
+[node name="Cube007" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
+mesh = SubResource( 1 )
+
+[node name="Cube008" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
+mesh = SubResource( 1 )
+
+[node name="Cube009" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
+mesh = SubResource( 1 )
+
+[node name="Cube010" parent="Floors13" instance=ExtResource( 3 )]
+transform = Transform( 2.5, 0, -3.72529e-09, 0, 0.625, 0, 3.72529e-09, 0, 2.5, -45.5451, 0, 5.3462 )
+mesh = SubResource( 1 )
 
 [node name="Floors11" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, -34.7423, 22.3514, -0.139118 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors11" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors11" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors12" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, 0.605972, 12.945, 55.6605 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors12" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors12" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, 0.672734, 0, -3.82384 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors" type="Spatial" parent="."]
 
-[node name="Cube002" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -18.4778, 0, 4 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -6 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -18.4778, -1.11759e-08, -0.9984 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 4.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.5, 0, -0.9984 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -3.5, 0, -3.99841 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1973, 0, 0 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors2" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors2" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.175, 0, 0 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors3" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors3" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors5" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1973, 9.40637, 55.4684 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors5" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors5" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors6" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.175, 9.40637, 55.4684 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors6" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors6" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors4" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30922, 0, 0 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors4" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors4" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, 0.672734, 0, -3.82384 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
 [node name="Floors7" type="Spatial" parent="."]
 transform = Transform( -0.999957, 0, 0.00930239, 0, 1, 0, -0.00930239, 0, -0.999957, 5.91496, 12.945, 55.7099 )
 
-[node name="Cube002" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube002" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 3.8147e-06 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube003" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube003" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube004" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube004" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 0 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube005" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube005" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, -5 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube006" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube006" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube007" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube007" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -13.4778, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube008" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube008" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 10.0016 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube009" type="MeshInstance" parent="Floors7" instance=ExtResource( 3 )]
+[node name="Cube009" parent="Floors7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 0.625, 0, 0, 0, 2.5, -8.5, 0, 5.00159 )
 mesh = SubResource( 1 )
-material/0 = null
-material/1 = null
 
-[node name="Cube010" type="MeshInstance" parent="Floors7" instance=ExtResource( 4 )]
+[node name="Cube010" parent="Floors7" instance=ExtResource( 4 )]
 transform = Transform( -2.49989, 0, -0.023256, 0, 4, 0, 0.023256, 0, -2.49989, -15.5753, -3.36849, 1.87857 )
 mesh = SubResource( 2 )
-material/0 = null
-material/1 = null
 
-[node name="Cube011" type="MeshInstance" parent="Floors7" instance=ExtResource( 4 )]
+[node name="Cube011" parent="Floors7" instance=ExtResource( 4 )]
 transform = Transform( -2.49989, 0, -0.023256, 0, 4, 0, 0.023256, 0, -2.49989, -15.6216, -3.36849, -3.10559 )
 mesh = SubResource( 2 )
-material/0 = null
-material/1 = null
