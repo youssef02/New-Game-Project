@@ -8,19 +8,19 @@
 transform = Transform( 4.28437, 0, 0, 0, 0.992883, 0, 0, 0, 3.81085, 0, 0, 0 )
 
 [node name="Jumppad2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 3.94867, 0, 0, 0, 0.999005, 0, 0, 0, 3.42304, 115.463, 0, 6.3859 )
+transform = Transform( 3.94867, 0, 0, 0, 0.999005, 0, 0, 0, 3.42304, 115.463, 0, 22.5792 )
 
 [node name="Jumppad3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2.57798, 0, 0, 0, 1.00187, 0, 0, 0, 4.52, 235.63, 0, 19.7577 )
+transform = Transform( 2.57798, 0, 0, 0, 1.00187, 0, 0, 0, 4.52, 235.63, 0, 32.9782 )
 
 [node name="Jumppad4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 4.63797, 0, 0, 0, 1, 0, 0, 0, 3.03587, 195.199, 0, 0 )
+transform = Transform( 4.63797, 0, 0, 0, 1, 0, 0, 0, 3.03587, 195.199, 0, -21.8068 )
 
 [node name="Jumppad5" parent="." instance=ExtResource( 1 )]
-transform = Transform( 3.4468, 0, 0, 0, 1, 0, 0, 0, 3.05172, 81.9129, 0, -9.50367 )
+transform = Transform( 3.44675, 0, -0.0158722, 0, 1, 0, 0.017927, 0, 3.05168, 81.9129, 0, -41.756 )
 
 [node name="Jumppad6" parent="." instance=ExtResource( 1 )]
-transform = Transform( 3.32192, 0, -1.85052, 0, 0.999005, 0, 2.13468, 0, 2.87972, 354.429, 0, 33.9367 )
+transform = Transform( 3.32192, 0, -1.85052, 0, 0.999005, 0, 2.13468, 0, 2.87972, 363.73, 0, 33.9367 )
 
 [node name="Jumppad7" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2.16879, 0, -2.44355, 0, 1.00187, 0, 1.39368, 0, 3.80256, 448.293, 0, 110.149 )
@@ -29,7 +29,7 @@ transform = Transform( 2.16879, 0, -2.44355, 0, 1.00187, 0, 1.39368, 0, 3.80256,
 transform = Transform( 3.90181, 0, -1.64121, 0, 1, 0, 2.50732, 0, 2.554, 424.962, 0, 71.6705 )
 
 [node name="Jumppad9" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2.89971, 0, -1.64978, 0, 1, 0, 1.86337, 0, 2.56734, 334.794, 0, 2.43182 )
+transform = Transform( 2.89971, 0, -1.64978, 0, 1, 0, 1.86337, 0, 2.56734, 307.454, 0, 2.43182 )
 
 [node name="Jumppad10" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1.73996, 0, -3.0728, 0, 0.999005, 0, 3.54465, 0, -1.50834, 409.497, 13.7209, 176.11 )
